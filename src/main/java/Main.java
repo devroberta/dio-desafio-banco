@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -20,6 +23,10 @@ public class Main {
     cc.transferir(valor, poupanca);
     cc.imprimirExtrato();
     poupanca.imprimirExtrato();
+
+    List<Conta> contas = Arrays.asList(cc, poupanca);
+    Banco banco = new Banco("NEW BANK", contas);
+    banco.imprimiListaContas();
   }
 
 }
